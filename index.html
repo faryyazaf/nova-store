@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nova Store | فروشگاه تمرینی</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <div class="container nav">
+    <a class="logo" href="index.html">NOVA<span>STORE</span></a>
+    <nav>
+      <a href="index.html">خانه</a>
+      <a href="#products">محصولات</a>
+      <a href="#about">درباره ما</a>
+      <a href="#contact">تماس با ما</a>
+    </nav>
+    <button class="cart-btn" id="cartButton" data-gtm="cart_click">سبد خرید <b id="cartCount">0</b></button>
+  </div>
+</header>
+
+<main>
+<section class="hero">
+  <div class="container hero-grid">
+    <div>
+      <span class="eyebrow">فروشگاه تمرینی GA4 + GTM</span>
+      <h1>یک سایت کوچک برای یادگیری واقعی آنالیتیکس</h1>
+      <p>این سایت عمداً برای تمرین Tracking ساخته شده و دکمه‌ها، محصولات، فرم و لینک خارجی دارد.</p>
+      <a class="btn primary" href="#products" id="heroCta">مشاهده محصولات</a>
+    </div>
+    <div class="hero-card">
+      <div class="mock-product">N</div>
+      <strong>شروع تمرین</strong>
+      <span>هر کلیک، یک فرصت برای Tracking</span>
+    </div>
+  </div>
+</section>
+
+<section class="container section" id="products">
+  <div class="section-head">
+    <div><span class="eyebrow">محصولات</span><h2>محصولات پیشنهادی</h2></div>
+    <span class="hint">برای تمرین view_item و add_to_cart</span>
+  </div>
+  <div class="products">
+    <article class="product-card">
+      <div class="product-img">01</div>
+      <h3>هدفون Nova Air</h3>
+      <p>هدفون بی‌سیم با طراحی مینیمال</p>
+      <strong>۲,۴۹۰,۰۰۰ تومان</strong>
+      <div class="actions">
+        <a class="btn secondary" href="product.html?product=nova-air" data-product="Nova Air" data-price="2490000" data-gtm="view_item">مشاهده</a>
+        <button class="btn primary add-cart" data-product="Nova Air" data-price="2490000">افزودن به سبد</button>
+      </div>
+    </article>
+
+    <article class="product-card">
+      <div class="product-img">02</div>
+      <h3>ساعت Nova Fit</h3>
+      <p>ساعت هوشمند برای استفاده روزمره</p>
+      <strong>۳,۱۹۰,۰۰۰ تومان</strong>
+      <div class="actions">
+        <a class="btn secondary" href="product.html?product=nova-fit" data-product="Nova Fit" data-price="3190000" data-gtm="view_item">مشاهده</a>
+        <button class="btn primary add-cart" data-product="Nova Fit" data-price="3190000">افزودن به سبد</button>
+      </div>
+    </article>
+
+    <article class="product-card">
+      <div class="product-img">03</div>
+      <h3>کیف Nova Pack</h3>
+      <p>کیف روزمره سبک و مقاوم</p>
+      <strong>۱,۸۹۰,۰۰۰ تومان</strong>
+      <div class="actions">
+        <a class="btn secondary" href="product.html?product=nova-pack" data-product="Nova Pack" data-price="1890000" data-gtm="view_item">مشاهده</a>
+        <button class="btn primary add-cart" data-product="Nova Pack" data-price="1890000">افزودن به سبد</button>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section class="stats">
+  <div class="container stats-grid">
+    <div><b>01</b><span>Page View</span></div>
+    <div><b>02</b><span>Click Tracking</span></div>
+    <div><b>03</b><span>Form Submit</span></div>
+    <div><b>04</b><span>E-commerce</span></div>
+  </div>
+</section>
+
+<section class="container section two-col" id="about">
+  <div>
+    <span class="eyebrow">درباره پروژه</span>
+    <h2>یک آزمایشگاه کوچک برای Analytics</h2>
+    <p>در این پروژه می‌توانی بدون داشتن سایت واقعی، رفتار کاربر را اندازه‌گیری کنی و در GA4 گزارش بسازی.</p>
+    <a class="external" href="https://www.google.com" target="_blank" rel="noopener" data-gtm="outbound_click">لینک خارجی برای تمرین ↗</a>
+  </div>
+  <div class="feature-box">
+    <h3>برای تمرین آماده است</h3>
+    <p>Scroll، Click، Form، Product View، Add to Cart و لینک خارجی در سایت قرار داده شده‌اند.</p>
+  </div>
+</section>
+
+<section class="container section contact" id="contact">
+  <div class="section-head">
+    <div><span class="eyebrow">Lead Generation</span><h2>فرم تماس</h2></div>
+  </div>
+  <form id="contactForm">
+    <label>نام<input type="text" name="name" required placeholder="نام شما"></label>
+    <label>ایمیل<input type="email" name="email" required placeholder="example@email.com"></label>
+    <label>پیام<textarea name="message" rows="4" placeholder="پیام شما"></textarea></label>
+    <button class="btn primary" type="submit">ارسال فرم</button>
+    <p id="formMessage" class="success" hidden>فرم با موفقیت ارسال شد.</p>
+  </form>
+</section>
+</main>
+
+<footer>
+  <div class="container footer">
+    <span>Nova Store — GA4 & GTM Practice Project</span>
+    <a href="#contact">تماس با ما</a>
+  </div>
+</footer>
+
+<script>
+window.dataLayer = window.dataLayer || [];
+window.dataLayer.push({event: 'site_ready'});
+
+let cartCount = 0;
+document.querySelectorAll('.add-cart').forEach(btn => {
+  btn.addEventListener('click', () => {
+    cartCount++;
+    document.getElementById('cartCount').textContent = cartCount;
+    const product = btn.dataset.product;
+    const price = Number(btn.dataset.price);
+    window.dataLayer.push({
+      event: 'add_to_cart',
+      ecommerce: {
+        currency: 'IRR',
+        value: price,
+        items: [{item_name: product, price: price, quantity: 1}]
+      }
+    });
+    btn.textContent = 'اضافه شد ✓';
+    setTimeout(() => btn.textContent = 'افزودن به سبد', 1000);
+  });
+});
+
+document.querySelectorAll('[data-gtm="view_item"]').forEach(link => {
+  link.addEventListener('click', () => {
+    window.dataLayer.push({
+      event: 'view_item',
+      ecommerce: {
+        currency: 'IRR',
+        value: Number(link.dataset.price),
+        items: [{item_name: link.dataset.product, price: Number(link.dataset.price), quantity: 1}]
+      }
+    });
+  });
+});
+
+document.getElementById('contactForm').addEventListener('submit', (e) => {
+  e.preventDefault();
+  window.dataLayer.push({event: 'generate_lead', form_name: 'contact_form'});
+  document.getElementById('formMessage').hidden = false;
+});
+
+document.getElementById('heroCta').addEventListener('click', () => {
+  window.dataLayer.push({event: 'hero_cta_click', cta_text: 'مشاهده محصولات'});
+});
+</script>
+</body>
+</html>

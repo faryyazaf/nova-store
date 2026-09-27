@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Product | Nova Store</title><link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header><div class="container nav"><a class="logo" href="index.html">NOVA<span>STORE</span></a><a class="btn secondary" href="index.html">بازگشت به فروشگاه</a></div></header>
+<main class="container product-page">
+  <div class="product-large">PRODUCT</div>
+  <div>
+    <span class="eyebrow">Product Detail</span>
+    <h1 id="productName">محصول Nova</h1>
+    <p>این صفحه برای تمرین View Item و تعامل با صفحه محصول ساخته شده است.</p>
+    <strong id="productPrice">۲,۴۹۰,۰۰۰ تومان</strong>
+    <br><br>
+    <button class="btn primary" id="addProduct">افزودن به سبد</button>
+  </div>
+</main>
+<script>
+window.dataLayer = window.dataLayer || [];
+const params = new URLSearchParams(location.search);
+const products = {
+  'nova-air': {name:'Nova Air', price:2490000},
+  'nova-fit': {name:'Nova Fit', price:3190000},
+  'nova-pack': {name:'Nova Pack', price:1890000}
+};
+const p = products[params.get('product')] || products['nova-air'];
+document.getElementById('productName').textContent = p.name;
+document.getElementById('productPrice').textContent = p.price.toLocaleString('fa-IR') + ' تومان';
+window.dataLayer.push({event:'view_item', ecommerce:{currency:'IRR', value:p.price, items:[{item_name:p.name, price:p.price, quantity:1}]}});
+document.getElementById('addProduct').addEventListener('click', () => {
+  window.dataLayer.push({event:'add_to_cart', ecommerce:{currency:'IRR', value:p.price, items:[{item_name:p.name, price:p.price, quantity:1}]}});
+  document.getElementById('addProduct').textContent='به سبد اضافه شد ✓';
+});
+</script>
+</body></html>
